@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El poder de la programación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .button-container {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+
+    .btn {
+      position: absolute;
+      width: 70px;
+      height: 40px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #N {
+      left: 370px;
+      top: 300px;
+    }
+
+    #Y {
+      left: 300px;
+      top: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💻 Prueba de entrada 💻</h1>
+  <p>¿Te gustó el curso de Arquitectura de Entornos Web?</p>
+
+  <div class="button-container">
+    <button id="N" class="btn" onmouseover="moverNo()">NO</button>
+    <button id="Y" class="btn" onclick="aceptar()">SI</button>
+  </div>
+
+  <script>
+    let flag = 1;
+    const noButton = document.getElementById("N");
+
+    function moverNo() {
+      if (flag === 1) {
+        noButton.style.top = "75px";
+        noButton.style.left = "700px";
+      } else if (flag === 2) {
+        noButton.style.top = "115px";
+        noButton.style.left = "100px";
+      } else if (flag === 3) {
+        noButton.style.top = "300px";
+        noButton.style.left = "370px";
+      }
+      flag++;
+      if (flag === 4) flag = 1;
+    }
+
+    function aceptar() {
+      alert("Muy bien, lo sabía!");
+    }
+  </script>
+</body>
+</html>
